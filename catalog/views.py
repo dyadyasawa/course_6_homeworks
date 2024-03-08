@@ -1,4 +1,5 @@
 from django.shortcuts import render
 
+
 def catalog(request):
-    return render(request, 'main/index.html')
+    return render(request, 'catalog_app/index.html')

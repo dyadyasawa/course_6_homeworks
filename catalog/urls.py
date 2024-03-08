@@ -1,7 +1,7 @@
 
 from django.urls import path
 
-from main.views import catalog
+from catalog.views import catalog
 
 urlpatterns = [
     path('', catalog)
