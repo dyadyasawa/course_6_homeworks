@@ -1,6 +1,9 @@
 from django.shortcuts import render
 
 
-def catalog(request):
-    #return render(request, 'catalog_app/index.html')
+def home(request):
     return render(request, 'catalog_app/home.html')
+
+
+def contact(request):
+    return render(request, 'catalog_app/contact.html')
