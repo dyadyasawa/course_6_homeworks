@@ -1,4 +1,7 @@
+from datetime import date
+
 from django.db import models
+
 
 NULLABLE = {'blank': True, 'null': True }
 class Product(models.Model):
@@ -7,6 +10,9 @@ class Product(models.Model):
     image = models.ImageField(upload_to='product/', verbose_name='Изображение', **NULLABLE)
     category = models.ForeignKey('Category', on_delete=models.CASCADE, verbose_name='Категория')
     price = models.IntegerField(verbose_name='Цена за покупку')
+
+    manufactured_at = models.DateTimeField(default=date.today, verbose_name='Дата производства продукта')
+
     created_at = models.DateTimeField(verbose_name='Дата создания') # установка на заполнение при создании
     updated_at = models.DateTimeField(verbose_name='Дата изменения') # установка на заполнение при изменении
 
