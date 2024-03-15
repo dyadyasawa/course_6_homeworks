@@ -1,4 +1,7 @@
+from datetime import date
+
 from django.db import models
+
 
 NULLABLE = {'blank': True, 'null': True }
 class Product(models.Model):
@@ -11,7 +14,7 @@ class Product(models.Model):
     updated_at = models.DateTimeField(verbose_name='Дата изменения') # установка на заполнение при изменении
 
     def __str__(self):
-        return f'{self.name}, {self.category}, {self.price}, {self.created_at}'
+        return f'{self.name}, {self.category}, {self.price}' #, {self.created_at}'
 
 
     class Meta:
