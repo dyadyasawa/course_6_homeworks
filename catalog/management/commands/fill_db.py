@@ -7,7 +7,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         product_list = [
-            {'name': '"Генератор безумных идей"',
+            {'name': 'Генератор безумных идей.',
              'description': 'Отдадим бесплатно, только заберите.',
              'image': '',
              'category': 'Точные приборы.',
@@ -16,7 +16,7 @@ class Command(BaseCommand):
              'updated_at': ''
              },
 
-            {'name': '"Так себе идейка..."',
+            {'name': 'Так себе идейка...',
              'description': 'Зачем платить больше. И так сойдет.',
              'image': '',
              'category': 'Идеи.',
@@ -25,7 +25,7 @@ class Command(BaseCommand):
              'updated_at': ''
              },
 
-            {'name': '"Хорошая идея."',
+            {'name': 'Хорошая идея.',
              'description': 'Все уже придумано за Вас.',
              'image': '',
              'category': 'Идеи.',
@@ -34,7 +34,7 @@ class Command(BaseCommand):
              'updated_at': ''
              },
 
-            {'name': '"Отличная идея!"',
+            {'name': 'Отличная идея!',
              'description': 'Идеально! Осталось только реализовать.',
              'image': '',
              'category': 'Идеи.',
@@ -43,7 +43,7 @@ class Command(BaseCommand):
              'updated_at': ''
              },
 
-            {'name': '"Гениальная идея!!!"',
+            {'name': 'Гениальная идея!!!',
              'description': 'Почувcтвуйте себя творцом!',
              'image': '',
              'category': 'Идеи.',
@@ -52,7 +52,7 @@ class Command(BaseCommand):
              'updated_at': ''
              },
 
-            {'name': '"Генератор гениальных идей."',
+            {'name': 'Генератор гениальных идей.',
              'description': 'Новейшее изобретение в области генерации идей.',
              'image': '',
              'category': 'Точные приборы.',
