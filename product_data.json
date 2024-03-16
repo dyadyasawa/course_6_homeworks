@@ -1,21 +1,5 @@
 [
 {
-    "model": "catalog.category",
-    "pk": 4,
-    "fields": {
-        "name": "Точные приборы.",
-        "description": "Чудо инженерной техники, впитавшее все современные инновации."
-    }
-},
-{
-    "model": "catalog.category",
-    "pk": 5,
-    "fields": {
-        "name": "Идеи.",
-        "description": "Нечто эфемерное, не поддающееся описанию."
-    }
-},
-{
     "model": "catalog.product",
     "pk": 6,
     "fields": {
@@ -82,15 +66,15 @@
 },
 {
     "model": "catalog.product",
-    "pk": 11,
+    "pk": 12,
     "fields": {
         "name": "Генератор безумных идей.",
         "description": "Отдадим бесплатно, только заберите.",
         "image": "",
-        "category": 5,
+        "category": 4,
         "price": 0,
-        "created_at": "2024-03-16T19:15:31.975Z",
-        "updated_at": "2024-03-16T19:15:31.975Z"
+        "created_at": "2024-03-16T20:01:19.140Z",
+        "updated_at": "2024-03-16T20:01:19.140Z"
     }
 }
 ]
