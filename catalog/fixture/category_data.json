@@ -1,7 +1,7 @@
 [
 {
     "model": "catalog.category",
-    "pk": 4,
+    "pk": 1,
     "fields": {
         "name": "Точные приборы.",
         "description": "Чудо инженерной техники, впитавшее все современные инновации."
@@ -9,7 +9,7 @@
 },
 {
     "model": "catalog.category",
-    "pk": 5,
+    "pk": 2,
     "fields": {
         "name": "Идеи.",
         "description": "Нечто эфемерное, не поддающееся описанию."

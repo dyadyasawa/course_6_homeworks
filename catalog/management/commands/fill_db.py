@@ -2,6 +2,8 @@ from django.core.management import BaseCommand
 
 from catalog.models import Product, Category
 
+import psycopg2
+
 import json
 
 
@@ -28,11 +30,27 @@ class Command(BaseCommand):
                 result_product_list.append(item['fields'])
         return result_product_list
 
-
     def handle(self, *args, **options):
 
-        Product.objects.all().delete()
-        Category.objects.all().delete()
+        conn = psycopg2.connect(
+            host="localhost",
+            database="db_course_6",
+            user="postgres",
+            password="paragWay_38"
+        )
+        conn.autocommit = True
+
+        with conn.cursor() as cur:
+            cur.execute("""
+                            TRUNCATE TABLE catalog_product RESTART IDENTITY CASCADE;
+                            TRUNCATE TABLE catalog_category RESTART IDENTITY CASCADE;
+                        """)
+        cur.close()
+        conn.close()
+
+
+        # Product.objects.all().delete()
+        # Category.objects.all().delete()
 
         category_for_create = []
 
