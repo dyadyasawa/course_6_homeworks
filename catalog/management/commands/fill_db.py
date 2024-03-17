@@ -2,84 +2,56 @@ from django.core.management import BaseCommand
 
 from catalog.models import Product, Category
 
+import json
+
 
 class Command(BaseCommand):
 
+
+    def get_data_from_category(self):
+
+        result_category_list = []
+        with open('catalog/fixture/category_data.json', 'r', encoding='utf-8') as file:
+            category_json = json.load(file)
+
+            for item in category_json:
+                result_category_list.append(item)
+        return result_category_list
+
+    def get_data_from_product(self):
+
+        result_product_list = []
+        with open('catalog/fixture/product_data.json', 'r', encoding='utf-8') as file:
+            product_json = json.load(file)
+
+            for item in product_json:
+                result_product_list.append(item['fields'])
+        return result_product_list
+
+
     def handle(self, *args, **options):
-        product_list = [
-            {'name': '"Генератор безумных идей"',
-             'description': 'Отдадим бесплатно, только заберите.',
-             'image': '',
-             'category': 'Точные приборы.',
-             'price': 0,
-             'created_at': '',
-             'updated_at': ''
-             },
 
-            {'name': '"Так себе идейка..."',
-             'description': 'Зачем платить больше. И так сойдет.',
-             'image': '',
-             'category': 'Идеи.',
-             'price': 30,
-             'created_at': '',
-             'updated_at': ''
-             },
-
-            {'name': '"Хорошая идея."',
-             'description': 'Все уже придумано за Вас.',
-             'image': '',
-             'category': 'Идеи.',
-             'price': 80,
-             'created_at': '',
-             'updated_at': ''
-             },
-
-            {'name': '"Отличная идея!"',
-             'description': 'Идеально! Осталось только реализовать.',
-             'image': '',
-             'category': 'Идеи.',
-             'price': 100,
-             'created_at': '',
-             'updated_at': ''
-             },
-
-            {'name': '"Гениальная идея!!!"',
-             'description': 'Почувcтвуйте себя творцом!',
-             'image': '',
-             'category': 'Идеи.',
-             'price': 130,
-             'created_at': '',
-             'updated_at': ''
-             },
-
-            {'name': '"Генератор гениальных идей."',
-             'description': 'Новейшее изобретение в области генерации идей.',
-             'image': '',
-             'category': 'Точные приборы.',
-             'price': 5000,
-             'created_at': '',
-             'updated_at': ''
-             }
-        ]
-
-        category_list = [
-            {'name': 'Точные приборы.',
-             'description': 'Чудо инженерной техники, впитавшее все современные инновации.'
-             },
-
-            {'name': 'Идеи.',
-             'description': 'Нечто эфемерное, не поддающееся описанию.'
-             }
-        ]
+        Product.objects.all().delete()
+        Category.objects.all().delete()
 
         category_for_create = []
-        for category_item in category_list:
-            category_for_create.append(Category(**category_item))
 
+        for category_item in self.get_data_from_category():
+            category_for_create.append(
+                Category(pk=category_item["pk"],
+                         name=category_item["fields"]["name"],
+                         description=category_item["fields"]["description"])
+                        )
         Category.objects.bulk_create(category_for_create)
 
-        product_for_create = []
-        for product_item in product_list:
-            product_for_create.append(Product(**product_item))
 
+        product_for_create = []
+
+        for product_item in self.get_data_from_product():
+            product_for_create.append(
+                Product(name=product_item["name"],
+                        description=product_item["description"],
+                        category=Category.objects.get(pk=product_item["category"]),
+                        price=product_item["price"])
+                        )
         Product.objects.bulk_create(product_for_create)

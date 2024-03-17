@@ -1,0 +1,80 @@
+[
+{
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+        "name": "Так себе идейка...",
+        "description": "Зачем платить больше. И так сойдет.",
+        "image": "",
+        "category": 5,
+        "price": 30,
+        "created_at": "2024-03-16T19:05:31.544Z",
+        "updated_at": "2024-03-16T19:05:31.544Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+        "name": "Хорошая идея.",
+        "description": "Все уже придумано за Вас.",
+        "image": "",
+        "category": 5,
+        "price": 80,
+        "created_at": "2024-03-16T19:06:45.171Z",
+        "updated_at": "2024-03-16T19:06:45.171Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 8,
+    "fields": {
+        "name": "Отличная идея!",
+        "description": "Идеально! Осталось только реализовать.",
+        "image": "",
+        "category": 5,
+        "price": 100,
+        "created_at": "2024-03-16T19:07:52.367Z",
+        "updated_at": "2024-03-16T19:07:52.367Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 9,
+    "fields": {
+        "name": "Гениальная идея!!!",
+        "description": "Почувcтвуйте себя творцом!",
+        "image": "",
+        "category": 5,
+        "price": 130,
+        "created_at": "2024-03-16T19:09:03.790Z",
+        "updated_at": "2024-03-16T19:09:03.790Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 10,
+    "fields": {
+        "name": "Генератор гениальных идей.",
+        "description": "Новейшее изобретение в области генерации идей.",
+        "image": "",
+        "category": 4,
+        "price": 5000,
+        "created_at": "2024-03-16T19:09:59.170Z",
+        "updated_at": "2024-03-16T19:09:59.170Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 12,
+    "fields": {
+        "name": "Генератор безумных идей.",
+        "description": "Отдадим бесплатно, только заберите.",
+        "image": "",
+        "category": 4,
+        "price": 0,
+        "created_at": "2024-03-16T20:01:19.140Z",
+        "updated_at": "2024-03-16T20:01:19.140Z"
+    }
+}
+]
