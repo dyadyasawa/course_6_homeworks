@@ -1,21 +1,29 @@
 {% extends 'catalog_app/base.html' %}
 
 {% block content %}
-
+<h1 class="text-center">Так себе идейка...</h1>
 <div class="container">
+    <br>
     <div class="row">
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="/media/{{Product.objects.image}}" class="card-img-top" alt="...">
+        <div class="col-3">
+            <div class="card text-center" style="width: 18rem;">
+                <img src="/media/product/Идея.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h5 class="card-title">Заголовок карточки</h5>
-                <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и составлять основную часть содержимого карты.</p>
-                <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+                <p class="card-text">Идея средней паршивости, зато не придется снимать последние штаны.</p>
+                <h3 class="card-text">30$</h3>
+
+                <a href="#" class="btn btn-primary">В корзину</a>
                 </div>
             </div>
         </div>
-        <div class="col">
-
+        <div  class="col-9">
+            <ul class="list">
+                <li>Не смотря на то, что данная идея сгенерирована, мягко говоря,
+                    не самыми нашими лучшими специалистами,<br>Вы останетесь довольны(не такие уж они
+                    не самые лучшие).</li>
+                <li>Если Вас не устроил результат, не отчаивайтесь, можно попробовать
+                    еще раз и еще...<br>Благо, цена позволяет!</li>
+            </ul>
         </div>
     </div>
 </div>
