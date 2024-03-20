@@ -14,5 +14,9 @@ def contact(request):
     return render(request, 'catalog_app/contact.html')
 
 
-def product_1(request):
-    return render(request, 'catalog_app/product_1.html')
+def product(request):
+    return render(request, 'catalog_app/product.html')
+
+
+def blank(request):
+    return render(request, 'catalog_app/blank.html')
