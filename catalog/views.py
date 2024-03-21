@@ -14,9 +14,25 @@ def contact(request):
     return render(request, 'catalog_app/contact.html')
 
 
-def product(request):
-    return render(request, 'catalog_app/product.html')
+def product_1(request):
+    return render(request, 'catalog_app/product_1.html')
 
 
-def blank(request):
-    return render(request, 'catalog_app/blank.html')
+def product_2(request):
+    return render(request, 'catalog_app/product_2.html')
+
+
+def product_3(request):
+    return render(request, 'catalog_app/product_3.html')
+
+
+def product_4(request):
+    return render(request, 'catalog_app/product_4.html')
+
+
+def product_5(request):
+    return render(request, 'catalog_app/product_5.html')
+
+
+def product_6(request):
+    return render(request, 'catalog_app/product_6.html')

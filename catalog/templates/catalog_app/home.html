@@ -17,10 +17,18 @@
                         <h5 class="card-title">{{object.price}}$</h5>
                         <p class="card-text">{{object.description}}</p>
 
-                        {% if object.name == 'Так себе идейка...' %}
-                            <a href="{% url 'catalog:product' %}" class="btn btn-primary">Купить</a>
-                        {% else %}
-                            <a href="{% url 'catalog:blank' %}" class="btn btn-primary">Купить</a>
+                        {% if object.name == 'Генератор безумных идей.' %}
+                            <a href="{% url 'catalog:product_1' %}" class="btn btn-primary">Купить</a>
+                        {% elif object.name == 'Так себе идейка...' %}
+                            <a href="{% url 'catalog:product_2' %}" class="btn btn-primary">Купить</a>
+                        {% elif object.name == 'Хорошая идея.' %}
+                            <a href="{% url 'catalog:product_3' %}" class="btn btn-primary">Купить</a>
+                        {% elif object.name == 'Отличная идея!' %}
+                            <a href="{% url 'catalog:product_4' %}" class="btn btn-primary">Купить</a>
+                        {% elif object.name == 'Гениальная идея!!!' %}
+                            <a href="{% url 'catalog:product_5' %}" class="btn btn-primary">Купить</a>
+                        {% elif object.name == 'Генератор гениальных идей.' %}
+                            <a href="{% url 'catalog:product_6' %}" class="btn btn-primary">Купить</a>
                         {% endif %}
                     </div>
 

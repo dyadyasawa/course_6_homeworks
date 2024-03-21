@@ -1,0 +1,29 @@
+{% extends 'catalog_app/base.html' %}
+
+{% block content %}
+<h1 class="text-center">Генератор безумных идей</h1>
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col-3">
+            <div class="card text-center" style="width: 18rem;">
+                <img src="/media/product/Шапочка.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">Прибор работает не совсем корректно.</p>
+                <h3 class="card-text">0$</h3>
+
+                <a href="#" class="btn btn-primary">В корзину</a>
+                </div>
+            </div>
+        </div>
+        <div  class="col-9">
+            <ul class="list">
+                <li><span style="font-size: 20px">При производстве данного чуда техники, видимо забыли установить
+                    блокировку глупостей, поэтому лучше им не пользоваться.</span></li>
+                <li><span style="font-size: 20px">Красиво будет смотреться в серванте
+                    или на прикроватной тумбочке!</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'catalog_app/base.html' %}
+
+{% block content %}
+<h1 class="text-center">Хорошая идея</h1>
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col-3">
+            <div class="card text-center" style="width: 18rem;">
+                <img src="/media/product/Хорошая идея.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">Идея хороша. Добавить нечего.</p>
+                <h3 class="card-text">80$</h3>
+
+                <a href="#" class="btn btn-primary">В корзину</a>
+                </div>
+            </div>
+        </div>
+        <div  class="col-9">
+            <ul class="list">
+                <li><span style="font-size: 20px">В нашей жизни без хороших идей - никуда!</span></li>
+                <li><span style="font-size: 20px">Поможет любому обрести уверенность в сегодняшнем и завтрашнем дне.</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
