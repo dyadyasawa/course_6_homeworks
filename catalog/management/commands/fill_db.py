@@ -69,6 +69,7 @@ class Command(BaseCommand):
             product_for_create.append(
                 Product(name=product_item["name"],
                         description=product_item["description"],
+                        image=product_item["image"],
                         category=Category.objects.get(pk=product_item["category"]),
                         price=product_item["price"])
                         )

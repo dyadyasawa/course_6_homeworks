@@ -1,16 +1,16 @@
 {% extends 'catalog_app/base.html' %}
 
 {% block content %}
-<h1 class="text-center">Генератор безумных идей</h1>
+<h1 class="text-center">{{object.name}}</h1>
 <div class="container">
     <br>
     <div class="row">
         <div class="col-3">
             <div class="card text-center" style="width: 18rem;">
-                <img src="/media/product/Шапочка.jpeg" class="card-img-top" alt="...">
+                <img src="/media/{{object.image}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                <p class="card-text">Прибор работает не совсем корректно.</p>
-                <h3 class="card-text">0$</h3>
+                <p class="card-text">{{object.description}}</p>
+                <h3 class="card-text">{{object.price}}$</h3>
 
                 <a href="#" class="btn btn-primary">В корзину</a>
                 </div>
@@ -18,10 +18,10 @@
         </div>
         <div  class="col-9">
             <ul class="list">
-                <li><span style="font-size: 20px">При производстве данного чуда техники, видимо забыли установить
-                    блокировку глупостей, поэтому лучше им не пользоваться.</span></li>
-                <li><span style="font-size: 20px">Красиво будет смотреться в серванте
-                    или на прикроватной тумбочке!</span></li>
+                <li><span style="font-size: 20px">Тезис с описанием плюсов или минусов товара.</span></li>
+                <li><span style="font-size: 20px">Второй тезис с описанием плюсов или минусов товара.</span></li>
+                <li><span style="font-size: 20px">Третий тезис с описанием плюсов или минусов товара.</span></li>
+                <li><span style="font-size: 20px">И еще один тезис с описанием плюсов или минусов товара.</span></li>
             </ul>
         </div>
     </div>
