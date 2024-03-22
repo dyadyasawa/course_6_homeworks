@@ -82,10 +82,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'db_course_6',
-        'USER': 'postgres',
+        'USER': '',  # Введите ИМЯ ПОЛЬЗОВАТЕЛЯ
         'HOST': '127.0.0.1',
         'PORT': 5432,
-        'PASSWORD': 'paragWay_38' # Вынести в переменную окружения
+        'PASSWORD': ''  # Введите ПАРОЛЬ
     }
 }
 

@@ -35,8 +35,8 @@ class Command(BaseCommand):
         conn = psycopg2.connect(
             host="localhost",
             database="db_course_6",
-            user="postgres",
-            password="paragWay_38"
+            user="",  # Введите ИМЯ ПОЛЬЗОВАТЕЛЯ
+            password=""  # Введите ПАРОЛЬ
         )
         conn.autocommit = True
 
